@@ -7,9 +7,9 @@ public class MemberDB {
     ArrayList<ZooMember> members = new ArrayList<>();
     LocationSystem locationSystem = new LocationSystem();
     AlertSystem alertSystem = new AlertSystem();
-    Point kLocation = new Point();
-    Point lLocation = new Point();
-    Point dLocation = new Point();
+    Point kLocation = new Point(250, 250);
+    Point lLocation = new Point(250, 250);
+    Point dLocation = new Point(250, 250);
 
     void addKeeper(String name, int id, int number) {
         members.add(new Keeper(name, id, number));
@@ -50,7 +50,7 @@ public class MemberDB {
                         alertSystem.alertAKeeper(String.valueOf(member2.getNum()));
                     }
                     else if (member2 instanceof Drone) {
-                        alertSystem.alertADrone(member2.getNum());
+                        AlertSystem.alertADrone(member2.getNum());
                     }
                 }
             }

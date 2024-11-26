@@ -1,9 +1,7 @@
 import javax.swing.*;
-import java.awt.*;
 
 public class Main {
     static Map map = new Map();
-    LocationSystem locationSystem = new LocationSystem();
 
     public static void main(String[] args) {
         map.addKeeper("Geoff", 80, 4392);
@@ -16,9 +14,8 @@ public class Main {
         JPanel mainPanel = new JPanel();
         mainPanel.add(map);
         frame.add(mainPanel);
-        //frame.setVisible(true);
 
-        //arbitrary length of loop for testing - changed to while true for real thing
+        //arbitrary length of loop for testing - changed for final
         //Iterate over map's paint method to get location of members and print their trackers on the screen
         for (int i = 0; i<50; i++) {
             try {

@@ -23,6 +23,7 @@ public class Map extends Canvas {
             memberDB.makeMap(g);
         }
         catch (IOException e) {
+            System.out.println(e);
             throw new RuntimeException(e);
         }
     }
