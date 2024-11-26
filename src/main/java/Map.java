@@ -3,6 +3,7 @@ import java.io.IOException;
 
 public class Map extends Canvas {
     private MemberDB memberDB = new MemberDB();
+    public LocationSystem locationSystem = new LocationSystem();
 
     public void addKeeper(String name, int id, int number) {
         memberDB.addKeeper(name, id, number);

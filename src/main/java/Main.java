@@ -6,10 +6,11 @@ import java.time.LocalDate;
 
 public class Main {
     static Map map = new Map();
+    LocationSystem locationSystem = new LocationSystem();
 
     public static void main(String[] args) {
-        map.addKeeper("Geoff", 4392, 80);
-        map.addLion("Simba", 7, 30);
+        map.addKeeper("Geoff", 80, 4392);
+        map.addLion("Simba", 30, 7);
         map.addDrone("Monitor1", 124,128);
 
         JFrame frame = new JFrame();
@@ -18,7 +19,7 @@ public class Main {
         JPanel mainPanel = new JPanel();
         mainPanel.add(map);
         frame.add(mainPanel);
-        frame.setVisible(true);
+        //frame.setVisible(true);
 
         for (int i = 0; i<50; i++) {
             map.repaint();
@@ -28,6 +29,7 @@ public class Main {
             catch(Exception e) {
                 e.printStackTrace();
             }
+            frame.setVisible(true);
         }
     }
 

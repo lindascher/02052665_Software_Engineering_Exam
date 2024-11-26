@@ -1,16 +1,14 @@
 import java.awt.*;
 
 public class Drone extends ZooMember{
-    public String name;
     public int freq;
-    public int id;
 
-    public Drone(String name, int freq, int id) {
+    public Drone(String name, int id, int freq) {
         super(name,id);
         this.freq = freq;
     }
 
-    public int getFreq() {
+    public int getNum() {
         return freq;
     }
 

@@ -1,25 +1,15 @@
 import java.awt.*;
 
 public class Lion extends ZooMember {
-    public String name;
     public int age;
-    public int id;
 
     public Lion(String name, int id, int age) {
         super(name,id);
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
+    public int getNum() {
         return age;
-    }
-
-    public int getID() {
-        return id;
     }
 
     public void drawPoint(Graphics g, Point location) {
