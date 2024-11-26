@@ -31,7 +31,6 @@ public class LocationSystem {
             in.close();
             // Convert from json
             Gson gson=new Gson();
-            System.out.println("Got the Point");
             return gson.fromJson(responseBody,Point.class);
         }
         catch(Exception e){

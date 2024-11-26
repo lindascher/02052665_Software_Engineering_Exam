@@ -1,8 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.time.LocalDate;
 
 public class Main {
     static Map map = new Map();
@@ -21,15 +18,19 @@ public class Main {
         frame.add(mainPanel);
         //frame.setVisible(true);
 
+        //arbitrary length of loop for testing - changed to while true for real thing
+        //Iterate over map's paint method to get location of members and print their trackers on the screen
         for (int i = 0; i<50; i++) {
-            map.repaint();
             try {
+                map.repaint();
                 Thread.sleep(1000);
             }
             catch(Exception e) {
                 e.printStackTrace();
             }
-            frame.setVisible(true);
+            finally {
+                frame.setVisible(true);
+            }
         }
     }
 

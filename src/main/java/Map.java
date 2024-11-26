@@ -21,7 +21,8 @@ public class Map extends Canvas {
     public void paint(Graphics g) {
         try {
             memberDB.makeMap(g);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

@@ -1,8 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
-import java.util.ArrayList;
 
+//Superclass of all Zoo Members - Keepers, Lions, and Drones
 public abstract class ZooMember {
     protected String name;
     protected int id;
@@ -12,16 +11,14 @@ public abstract class ZooMember {
         this.id = id;
     }
 
+    //For Keeper phone number, lion age, and drone freq
     public abstract int getNum();
 
+    //Different for each Member
     public abstract void drawPoint(Graphics g, Point location);
 
     public int getID() {
         return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
 }

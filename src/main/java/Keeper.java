@@ -15,7 +15,7 @@ public class Keeper extends ZooMember {
     public void drawPoint(Graphics g, Point location) {
         g.setColor(Color.blue);
         g.drawOval(location.x, location.y, 2, 2);
-        g.drawString(name + ", " + number, location.x+3, location.y+3);
+        g.drawString("Name: " + name + ", Phone Number: " + number, location.x+3, location.y+3);
     }
 
 }

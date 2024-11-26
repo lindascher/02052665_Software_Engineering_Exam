@@ -15,7 +15,7 @@ public class Drone extends ZooMember{
     public void drawPoint(Graphics g, Point location) {
         g.setColor(Color.black);
         g.drawRect(location.x, location.y, 3, 3);
-        g.drawString(name + ", " + freq + " Hz", location.x+3, location.y+3);
+        g.drawString("Name: " + name + ", Freq: " + freq + "MHz", location.x+3, location.y+3);
     }
 
 }

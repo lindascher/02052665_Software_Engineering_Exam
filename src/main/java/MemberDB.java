@@ -23,7 +23,9 @@ public class MemberDB {
         members.add(new Drone(name, id, age));
     }
 
+    //Call methods in ZooMembers to draw their points and add their info
     public void makeMap(Graphics g) throws IOException {
+        //Iterate over Zoo members, check what class they are, and draw their point accordingly
         for (ZooMember member : members) {
             if (member instanceof Keeper) {
                 kLocation = LocationSystem.getCoords(member.getID());
@@ -41,6 +43,7 @@ public class MemberDB {
                 System.out.println("Unknown member type");
             }
 
+            //Alert Keeper and Drone if Lion gets too close
             if (Math.hypot(kLocation.x,lLocation.x) < 60 || Math.hypot(kLocation.y,lLocation.y) < 60) {
                 for (ZooMember member2 : members) {
                     if (member2 instanceof Keeper) {
